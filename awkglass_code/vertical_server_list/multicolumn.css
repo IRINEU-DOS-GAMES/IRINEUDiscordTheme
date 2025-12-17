@@ -1,67 +1,100 @@
 /* 
    LISTA DE SERVIDORES EM MÚLTIPLAS COLUNAS (Vertical)
-   Adaptado do NotAnotherAnimeTheme (dcsl.css)
-   Copiado e integrado ao DiscordDiscordia conforme pedido do usuário.
+   Atualizado para seletores universais (2024/2025)
+   Baseado no layout do NotAnotherAnimeTheme
 */
 
-/* 
-  Largura da barra lateral
-  OBS: O NAAT original usa 126px/150px. 
-  Se quiser mais colunas, aumente o valor de width.
-*/
-#app-mount .guilds_c48ade, 
-.wrapper-3NnKdC {
-    width: 140px !important; 
+:root {
+    --server-listing-width: 126px; /* Largura para 2 colunas */
+    --server-item-size: 48px;
+    --server-item-gap: 6px;
 }
 
-#app-mount .guilds_c48ade .scrollerWrap-1IAIlv,
-.wrapper-3NnKdC .scroller-wrap {
+/* 1. Wrapper da lista de servidores */
+nav[class*="guilds"], 
+[class*="guilds"] {
+    width: var(--server-listing-width) !important;
+}
+
+/* 2. Scroller em Grid Flexbox */
+[class*="guilds"] [class*="scroller"] {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    padding: 10px 0 0 0 !important;
+    align-content: flex-start !important;
+    justify-content: flex-start !important; /* Alinha à esquerda */
+}
+
+/* 3. Itens da lista (Wrappers diretos do scroller) */
+[class*="guilds"] [class*="scroller"] > div {
+    width: var(--server-item-size) !important;
+    height: auto !important;
+    margin: 0 4px 8px 4px !important; /* Margem simétrica */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Exceção 1: Botão Home (TutorialContainer) */
+[class*="guilds"] [class*="scroller"] > [class*="tutorialContainer"] {
+    width: 100% !important;
+    margin: 0 0 8px 0 !important;
+}
+
+/* Exceção 2: Pastas Abertas */
+[class*="guilds"] [class*="scroller"] > div:has([class*="folder"][class*="expanded"]),
+[class*="guilds"] [class*="scroller"] > div:has([class*="folder"][aria-expanded="true"]) {
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
+}
+
+/* 4. List Item (O conteúdo dentro do wrapper) */
+[class*="guilds"] [class*="listItem"] {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. Força o tamanho dos ícones de servidor (Blob) */
+[class*="blobContainer"] {
+    width: var(--server-item-size) !important;
+    height: var(--server-item-size) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* 6. Ícones de pasta (Fechada) */
+[class*="folderIconWrapper"] {
+    width: var(--server-item-size) !important;
+    height: var(--server-item-size) !important;
+}
+
+/* 7. Pastas Abertas - Grid Interno */
+[class*="folder"] [class*="list"] {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
     width: 100% !important;
 }
 
-/* Habilita o sistema de colunas (quebra de linha) */
-#app-mount .guilds_c48ade .scrollerBase_d125d2,
-.wrapper-3NnKdC .scroller-1Bvpku {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: flex-start;
-    padding-left: 0;
-    padding-top: 10px !important;
+/* Itens DENTRO da pasta aberta */
+[class*="folder"] [class*="list"] > div {
+    width: var(--server-item-size) !important;
+    margin: 0 4px 8px 4px !important;
 }
 
-/* Margens e posicionamento dos itens */
-#app-mount .guilds_c48ade .listItem-2P_4kh,
-.wrapper-3NnKdC .container-1ETFDs {
-    margin-left: 8px !important;
-    margin-top: 8px !important;
-    width: auto !important;
+/* 8. Separadores Ocultos */
+[class*="guildSeparator"] {
+    display: none !important;
 }
 
-/* Itens que não devem ter margem/comportamento especial */
-#app-mount .guilds_c48ade .scrollerBase_d125d2 > .listItem-2P_4kh:first-child,
-.scroller-1Bvpku > .container-1ETFDs:first-child {
-    margin: auto !important;
-}
-
-/* Ajuste para pastas */
-#app-mount .guilds_c48ade [class*="expandedFolderBackground"] {
+/* 9. Expanded Folder Background */
+[class*="expandedFolderBackground"] {
     width: 100% !important;
     left: 0 !important;
-    translate: none !important;
 }
-
-/* Código original do NAAT para referência (adaptado acima para classes novas também) */
-/*
-.wrapper-3NnKdC{width: 126px;}
-.wrapper-3NnKdC .scroller-wrap{width: 150px;}
-.wrapper-3NnKdC .scroller-1Bvpku {
-    display: flex;
-    flex-flow: row wrap;
-    padding-left: 0;
-    align-content: flex-start;
-}
-.wrapper-3NnKdC .scroller-1Bvpku .container-1ETFDs {
-    margin-left: 8px;
-    margin-top: 8px;
-}
-*/
