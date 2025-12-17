@@ -1,0 +1,67 @@
+/* 
+   LISTA DE SERVIDORES EM MÚLTIPLAS COLUNAS (Vertical)
+   Adaptado do NotAnotherAnimeTheme (dcsl.css)
+   Copiado e integrado ao DiscordDiscordia conforme pedido do usuário.
+*/
+
+/* 
+  Largura da barra lateral
+  OBS: O NAAT original usa 126px/150px. 
+  Se quiser mais colunas, aumente o valor de width.
+*/
+#app-mount .guilds_c48ade, 
+.wrapper-3NnKdC {
+    width: 140px !important; 
+}
+
+#app-mount .guilds_c48ade .scrollerWrap-1IAIlv,
+.wrapper-3NnKdC .scroller-wrap {
+    width: 100% !important;
+}
+
+/* Habilita o sistema de colunas (quebra de linha) */
+#app-mount .guilds_c48ade .scrollerBase_d125d2,
+.wrapper-3NnKdC .scroller-1Bvpku {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    padding-left: 0;
+    padding-top: 10px !important;
+}
+
+/* Margens e posicionamento dos itens */
+#app-mount .guilds_c48ade .listItem-2P_4kh,
+.wrapper-3NnKdC .container-1ETFDs {
+    margin-left: 8px !important;
+    margin-top: 8px !important;
+    width: auto !important;
+}
+
+/* Itens que não devem ter margem/comportamento especial */
+#app-mount .guilds_c48ade .scrollerBase_d125d2 > .listItem-2P_4kh:first-child,
+.scroller-1Bvpku > .container-1ETFDs:first-child {
+    margin: auto !important;
+}
+
+/* Ajuste para pastas */
+#app-mount .guilds_c48ade [class*="expandedFolderBackground"] {
+    width: 100% !important;
+    left: 0 !important;
+    translate: none !important;
+}
+
+/* Código original do NAAT para referência (adaptado acima para classes novas também) */
+/*
+.wrapper-3NnKdC{width: 126px;}
+.wrapper-3NnKdC .scroller-wrap{width: 150px;}
+.wrapper-3NnKdC .scroller-1Bvpku {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 0;
+    align-content: flex-start;
+}
+.wrapper-3NnKdC .scroller-1Bvpku .container-1ETFDs {
+    margin-left: 8px;
+    margin-top: 8px;
+}
+*/
