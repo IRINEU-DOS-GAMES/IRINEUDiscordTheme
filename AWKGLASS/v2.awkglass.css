@@ -1,13 +1,12 @@
 /*
  *name          IRINEU Discord Theme
- *author        @ungiglio
+ *author        @IRINEU
  *internalcode  AWKGLASS
  *version       #20251217
-*/
+ */
 
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 @import url("../awkglass_code/colored_userlist/userlist.css");
-@import url("../awkglass_code/vertical_server_list/multicolumn.css");
 
 :root,
 .theme-dark,
@@ -167,7 +166,7 @@
     --spoiler-hidden-background: var(--custom-spoiler-color) !important;
     --spoiler-hidden-background-hover: var(--highlight) !important;
 
-    --ver: "Lande della Discordia (" var(--current-ver)") " var(--file-ver);
+    --ver: "IRINEU Discord Theme (" var(--current-ver)") " var(--file-ver);
 }
 
 ._2debea61131de3de-info::before {
