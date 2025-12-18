@@ -1,13 +1,13 @@
 /*
- *name          Lande della Discordia
- *author        @ungiglio
+ *name          IRINEU Discord Theme
+ *author        @IRINEU
  *internalcode  BACKGROUNDLESS
  *version       #20251217BL
-*/
+ */
 
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');   /* credits to mwittrien for the original code */
-@import url("https://ungiglio.github.io/DiscordDiscordia/awkglass_code/colored_userlist/userlist.css");
+@import url("../awkglass_code/colored_userlist/userlist.css");
 
 :root,
 .theme-dark,
@@ -43,7 +43,7 @@
     --transition-time: 0.3s;
     --show-original-title: 0;
     --show-custom-title: 1;
-    --custom-title-text: "Lande della Discordia";
+    --custom-title-text: "IRINEU Discord Theme";
     --custom-title-font-size: 16px;
     --custom-title-font-weight: normal;
     --custom-title-margin-top: 0px;
